@@ -2,3 +2,8 @@ streamlit
 psycopg2-binary
 pandas
 matplotlib
+# Add spaCy
+spacy==3.5.0
+
+# Add spaCy model for English
+en-core-web-sm==3.0.0
