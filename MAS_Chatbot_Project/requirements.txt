@@ -6,4 +6,4 @@ matplotlib
 spacy==3.5.0
 
 # Add spaCy model for English
-en-core-web-sm==3.0.0
+en-core-web-sm==3.1.0
