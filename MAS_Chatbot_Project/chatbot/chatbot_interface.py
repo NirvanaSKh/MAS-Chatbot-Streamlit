@@ -6,10 +6,8 @@ from db.database_connection import connect_to_db
 # Load the spaCy model for English language processing
 try:
     nlp = spacy.load("en_core_web_sm")
-except:
-    # If the model is not found, install it on the fly (recommended to avoid in cloud deployment)
-    os.system('pip install en-core-web-sm==3.1.0')
-    nlp = spacy.load("en_core_web_sm")
+except Exception as e:
+    raise RuntimeError(f"Error loading spaCy model: {str(e)}. Please make sure the model is installed.")
 
 def extract_intent_and_entities(user_query):
     # Process the query with spaCy
