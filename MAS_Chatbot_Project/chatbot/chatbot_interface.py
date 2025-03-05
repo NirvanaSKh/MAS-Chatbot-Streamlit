@@ -1,8 +1,14 @@
 import spacy
+import os
 from db.database_connection import connect_to_db
 
 # Load the spaCy model for English language processing
-nlp = spacy.load("en_core_web_sm")
+try:
+    nlp = spacy.load("en_core_web_sm")
+except:
+    # If the model is not found, install it on the fly
+    os.system('python -m spacy download en_core_web_sm')
+    nlp = spacy.load("en_core_web_sm")
 
 def extract_intent_and_entities(user_query):
     # Process the query with spaCy
