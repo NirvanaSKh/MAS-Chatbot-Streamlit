@@ -1,5 +1,5 @@
 import streamlit as st
-from chatbot.chatbot_interface import main  # Assuming your chatbot logic is inside this function
+from chatbot.chatbot_interface import main  # Import the main function from chatbot interface
 
 def app():
     # Title of the app
@@ -10,9 +10,8 @@ def app():
 
     # When the user presses 'Enter', process the query
     if user_query:
-        # Call the main chatbot function to process the query
         st.write(f"Query: {user_query}")  # Display the query
-        response = main(user_query)  # Assuming `main` can handle the query
+        response = main(user_query)  # Call the main function with the query
         st.write(f"Response: {response}")  # Display the response from the chatbot
 
 if __name__ == "__main__":
