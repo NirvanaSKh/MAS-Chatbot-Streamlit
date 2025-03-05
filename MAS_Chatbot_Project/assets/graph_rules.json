@@ -1,0 +1,6 @@
+{
+    "distribution": "histogram",
+    "comparison": "bar",
+    "relationship": "scatter",
+    "default": "line"
+}
